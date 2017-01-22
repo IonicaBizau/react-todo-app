@@ -1,6 +1,7 @@
 import React from "react";
 import TodosList from "./todos-list"
 import CreateTodo from "./create-todo";
+import css from "./style.css";
 
 const todos = [
     {
@@ -16,6 +17,14 @@ const todos = [
 export default class App extends React.Component {
     constructor (props) {
         super(props);
+        //setInterval(() => {
+        //    todos.push({
+        //        task: "Make tea: " + Math.random(),
+        //        isCompleted: true
+        //    });
+        //    this.setState({ todos });
+        //}, 1000);
+
 
         this.state = {
             todos

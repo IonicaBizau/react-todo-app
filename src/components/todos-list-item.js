@@ -36,14 +36,16 @@ export default class TodosListItem extends React.Component {
         if (this.state.isEditing) {
             return (
                 <td>
-                    <input ref="task" defaultValue={task} />
+                    <form onSubmit={this.editTask.bind(this)}>
+                        <input ref="task" defaultValue={task} autoFocus />
+                    </form>
                 </td>
-            )
+            );
         }
 
         return (
             <td onClick={this.toggleTask.bind(this)} style={taskStyle}>{task}</td>
-        )
+        );
     }
 
     render () {
@@ -54,6 +56,7 @@ export default class TodosListItem extends React.Component {
             </tr>
         )
     }
+
     setEditState (isEditing) {
         this.setState({
             isEditing
@@ -63,12 +66,15 @@ export default class TodosListItem extends React.Component {
     toggleTask () {
         this.props.toggleTask(this.props.id);
     }
-    editTask () {
+
+    editTask (e) {
         this.props.editTask(this.props.id, this.refs.task.value);
         this.setState({
             isEditing: false
         });
+        e.preventDefault();
     }
+
     deleteTask () {
         this.props.deleteTask(this.props.id);
     }
