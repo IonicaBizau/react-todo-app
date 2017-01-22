@@ -10,7 +10,7 @@ module.exports = {
     ],
     output: {
         path: `${__dirname}/public`,
-        filename: "public/index.js"
+        filename: "index.js"
     },
     resolve: {
         modulesDirectories: ["node_modules", "src"],
@@ -34,6 +34,12 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin(),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('production')
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin()
     ]
 };

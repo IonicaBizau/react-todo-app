@@ -56,7 +56,10 @@
               "cd react-todo-app",
               "npm i",
               "npm run start:dev",
-              "open localhost:8080"
+              "open localhost:8080",
+              "",
+              "# To build the app for production, run the following command:",
+              "npm run bundle"
           ]
       }
   }

@@ -12,7 +12,7 @@ const todos = {
     },
     get () {
         try {
-            return JSON.parse(localStorage.getItem(this.lsKey));
+            return JSON.parse(localStorage.getItem(this.lsKey)) || []
         } catch (e) {}
         return [];
     },
