@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
 
-
 * {
     box-sizing: border-box;
 }
@@ -30,7 +29,6 @@ input, button {
     padding: 0.5em;
     margin: 2px;
     display: inline-block;
-    border-radius: 3px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.19);
 }
 input, button, div#app {
@@ -73,7 +71,6 @@ table {
 }
 
 p.tutorial {
-    border-radius: 3px;
     padding: 10px;
     color: #222;
     background: #ecf0f1;

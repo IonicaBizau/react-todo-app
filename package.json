@@ -1,16 +1,16 @@
 {
   "name": "react-todo-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A minimal TODO app built with React and Webpack",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "webpack-dev-server",
     "bundle": "webpack -p"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
+  "license": "MIT",
   "dependencies": {
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
@@ -26,5 +26,38 @@
     "react-hot-loader": "^1.3.1",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
+  },
+  "homepage": "https://github.com/IonicaBizau/react-todo-app#readme",
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IonicaBizau/react-todo-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/react-todo-app/issues"
+  },
+  "blah": {
+      "show_installation": true,
+      "is_only_web": false,
+      "installation_command": {
+          "language": "sh",
+          "content": [
+              "git clone https://github.com/IonicaBizau/react-todo-app/",
+              "cd react-todo-app",
+              "npm i",
+              "npm run start:dev",
+              "open localhost:8080"
+          ]
+      }
   }
 }
