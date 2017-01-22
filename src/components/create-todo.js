@@ -3,8 +3,8 @@ import React from "react";
 export default class CreateTodo extends React.Component {
     render () {
         return (
-            <form onSubmit={this.onSubmit.bind(this)}>
-                <input type="text" placeholder="Task" ref="taskMessage"/>
+            <form onSubmit={this.onSubmit.bind(this)} className="create-todo-form">
+                <input type="text" placeholder="Task" ref="taskMessage" autoFocus/>
                 <button>Add</button>
             </form>
         );

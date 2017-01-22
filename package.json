@@ -14,6 +14,7 @@
   "dependencies": {
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-github-corner": "^0.3.0",
     "style-loader": "^0.13.1"
   },
   "devDependencies": {

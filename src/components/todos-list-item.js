@@ -14,14 +14,14 @@ export default class TodosListItem extends React.Component {
             return (
                 <td>
                     <button onClick={this.editTask.bind(this)}>Save</button>
-                    <button onClick={this.setEditState.bind(this, false)}>Cancel</button>
+                    <button className="cancel-btn" onClick={this.setEditState.bind(this, false)}>Cancel</button>
                 </td>
             );
         }
         return (
             <td>
                 <button onClick={this.setEditState.bind(this, true)}>Edit</button>
-                <button onClick={this.deleteTask.bind(this)}>Delete</button>
+                <button className="delete-btn" onClick={this.deleteTask.bind(this)}>Delete</button>
             </td>
         );
     }
@@ -29,8 +29,7 @@ export default class TodosListItem extends React.Component {
     renderTask () {
         const { task, isCompleted } = this.props;
         const taskStyle = {
-            color: isCompleted ? "green" : "red"
-          , cursor: "pointer"
+            cursor: "pointer"
         };
 
         if (this.state.isEditing) {
@@ -49,8 +48,9 @@ export default class TodosListItem extends React.Component {
     }
 
     render () {
+        const { isCompleted } = this.props;
         return (
-            <tr>
+            <tr className={"todo-" + (isCompleted ? "completed" : "not-completed") }>
                 {this.renderTask()}
                 {this.renderActionSection()}
             </tr>

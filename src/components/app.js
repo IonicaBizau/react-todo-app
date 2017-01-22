@@ -2,17 +2,35 @@ import React from "react";
 import TodosList from "./todos-list"
 import CreateTodo from "./create-todo";
 import css from "./style.css";
+import GithubCorner from "react-github-corner";
 
-const todos = [
-    {
-        task: "Make pie",
-        isCompleted: false
+const todos = {
+    items: [],
+    lsKey: "todos",
+    populate () {
+        this.items = this.get();
     },
-    {
-        task: "Make tea",
-        isCompleted: true
+    get () {
+        try {
+            return JSON.parse(localStorage.getItem(this.lsKey));
+        } catch (e) {}
+        return [];
+    },
+    update () {
+        localStorage.setItem(this.lsKey, JSON.stringify(this.items));
+    },
+    add (obj) {
+        this.items.push(obj);
+        this.update();
+    },
+    remove (id) {
+        this.items.splice(id, 1);
+        this.update();
     }
-];
+};
+
+todos.populate();
+
 
 export default class App extends React.Component {
     constructor (props) {
@@ -27,13 +45,21 @@ export default class App extends React.Component {
 
 
         this.state = {
-            todos
+            todos: todos.items
         };
     }
     render () {
         return (
             <div>
-                <h1>Hi there</h1>
+                <GithubCorner
+                    href="https://github.com/IonicaBizau/react-todo-app"
+                    bannerColor="#64CEAA"
+                    octoColor="#fff"
+                    width={80}
+                    height={80}
+                    direction="right"
+                />
+                <h1>TODOs</h1>
                 <CreateTodo
                     createTask={this.createTask.bind(this)}
                 />
@@ -48,7 +74,9 @@ export default class App extends React.Component {
     }
 
     createTask (task) {
-        this.state.todos.push({
+        task = task.trim();
+        if (!task) { return; }
+        todos.add({
             task,
             isCompletedL: false
         });
@@ -66,7 +94,7 @@ export default class App extends React.Component {
         this.setState({ todos: this.state.todos });
     }
     deleteTask (taskId) {
-        todos.splice(taskId, 1);
+        todos.remove(taskId);
         this.setState({ todos: this.state.todos });
     }
 }

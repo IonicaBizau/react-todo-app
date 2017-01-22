@@ -1,3 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body, input, button {
+    font-family: 'Open Sans', sans-serif;
+}
+
 body {
-    background: red;
+    background: #1abc9c;
+}
+
+#app {
+    max-width: 100%;
+    width: 900px;
+    margin: 2em auto;
+    background: white;
+    padding: 1em;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #1abc9c;
+}
+
+input, button {
+    padding: 0.5em;
+    margin: 2px;
+    display: inline-block;
+    border-radius: 3px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.19);
+}
+input, button, div#app {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+input {
+    border: 2px solid #16a085;
+}
+
+button {
+    background: #16a085;
+    color: #fff;
+    border: none;
+    padding: 0.7em;
+}
+
+button:last-of-type {
+    margin-right: 0;
+}
+
+td:first-of-type {
+    width: 100%;
+}
+
+th:last-of-type,
+td:last-of-type {
+    text-align: right;
+}
+
+th {
+    text-align: left;
+}
+
+th, td {
+    padding: 10px 0;
+}
+
+table {
+    width: 100%;
+}
+
+p.tutorial {
+    border-radius: 3px;
+    padding: 10px;
+    color: #222;
+    background: #ecf0f1;
+    text-align: center;
+}
+
+form.create-todo-form {
+    border-bottom: 1px solid #ecf0f1;
+    padding: 1em 0;
+}
+
+form.create-todo-form input {
+    width: calc(100% - 50px);
+}
+
+
+tr.todo-not-completed td:first-of-type {
+    color: #e74c3c;
+}
+
+tr.todo-completed td:first-of-type {
+    color: #1abc9c;
+}
+
+tr > td:first-of-type {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+button {
+    cursor: pointer;
+}
+
+tr > td:first-of-type {
+    width: calc(100% - 0px) !important;
+}
+
+tr > td > form > input {
+    width: 100%;
+}
+
+.delete-btn, .cancel-btn {
+    background-color: #e74c3c;
 }
