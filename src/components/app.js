@@ -16,16 +16,26 @@ const todos = {
         } catch (e) {}
         return [];
     },
-    update () {
+    save () {
         localStorage.setItem(this.lsKey, JSON.stringify(this.items));
+    },
+    toggle (id) {
+        let todoItem = this.items[id];
+        todoItem.isCompleted = !todoItem.isCompleted;
+        this.save();
     },
     add (obj) {
         this.items.push(obj);
-        this.update();
+        this.save();
     },
     remove (id) {
         this.items.splice(id, 1);
-        this.update();
+        this.save();
+    },
+    update (id, task) {
+        let todoItem = this.items[id];
+        todoItem.task = task;
+        this.save();
     }
 };
 
@@ -78,19 +88,17 @@ export default class App extends React.Component {
         if (!task) { return; }
         todos.add({
             task,
-            isCompletedL: false
+            isCompleted: false
         });
         this.setState({ todos: this.state.todos });
     }
 
     toggleTask (taskId) {
-        let todoItem = todos[taskId];
-        todoItem.isCompleted = !todoItem.isCompleted;
+        todos.toggle(taskId);
         this.setState({ todos: this.state.todos });
     }
     editTask (taskId, task) {
-        let todoItem = todos[taskId];
-        todoItem.task = task;
+        todos.update(taskId, task);
         this.setState({ todos: this.state.todos });
     }
     deleteTask (taskId) {
