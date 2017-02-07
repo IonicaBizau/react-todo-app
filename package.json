@@ -47,23 +47,23 @@
     "url": "https://github.com/IonicaBizau/react-todo-app/issues"
   },
   "blah": {
-      "show_installation": true,
-      "description": "**Hey!** :blush: This is my first project in React. If you find any tips, please share them with me and let me know what can pe improved.",
-      "is_only_web": false,
-      "ex_img": "https://i.imgur.com/0g5ycgd.png",
-      "ex_url": "https://ionicabizau.github.io/react-todo-app",
-      "installation_command": {
-          "language": "sh",
-          "content": [
-              "git clone https://github.com/IonicaBizau/react-todo-app/",
-              "cd react-todo-app",
-              "npm i",
-              "npm run start:dev",
-              "open localhost:8080",
-              "",
-              "# To build the app for production, run the following command:",
-              "npm run bundle"
-          ]
-      }
+    "show_installation": true,
+    "description": "**Hey!** :blush: This is my first project in React. If you find any tips, please share them with me and let me know what can pe improved.",
+    "is_only_web": false,
+    "ex_img": "https://i.imgur.com/0g5ycgd.png",
+    "ex_url": "https://ionicabizau.github.io/react-todo-app",
+    "installation_command": {
+      "language": "sh",
+      "content": [
+        "git clone https://github.com/IonicaBizau/react-todo-app/",
+        "cd react-todo-app",
+        "npm i",
+        "npm run start:dev",
+        "open localhost:8080",
+        "",
+        "# To build the app for production, run the following command:",
+        "npm run bundle"
+      ]
+    }
   }
 }
