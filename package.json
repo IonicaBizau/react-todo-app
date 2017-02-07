@@ -1,7 +1,7 @@
 {
   "name": "react-todo-app",
   "version": "1.0.0",
-  "description": "A minimal TODO app built with React and Webpack",
+  "description": "A React powered todo app.",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -49,6 +49,8 @@
   "blah": {
       "show_installation": true,
       "is_only_web": false,
+      "ex_img": "https://i.imgur.com/0g5ycgd.png",
+      "ex_url": "https://ionicabizau.github.io/react-todo-app",
       "installation_command": {
           "language": "sh",
           "content": [

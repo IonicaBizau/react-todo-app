@@ -3,7 +3,9 @@
 
  [![Patreon](https://img.shields.io/badge/Support%20me%20on-Patreon-%23e6461a.svg)][patreon] [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![AMA](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Version](https://img.shields.io/npm/v/react-todo-app.svg)](https://www.npmjs.com/package/react-todo-app) [![Downloads](https://img.shields.io/npm/dt/react-todo-app.svg)](https://www.npmjs.com/package/react-todo-app) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
->
+> A React powered todo app.
+
+[![react-todo-app](https://i.imgur.com/0g5ycgd.png)](https://ionicabizau.github.io/react-todo-app)
 
 ## :cloud: Installation
 
@@ -13,6 +15,9 @@ cd react-todo-app
 npm i
 npm run start:dev
 open localhost:8080
+
+# To build the app for production, run the following command:
+npm run bundle
 ```
 
 ## :yum: How to contribute
