@@ -5,6 +5,8 @@
 
 > A React powered todo app.
 
+**Hey!** :blush: This is my first project in React. If you find any tips, please share them with me and let me know what can pe improved.
+
 [![react-todo-app](https://i.imgur.com/0g5ycgd.png)](https://ionicabizau.github.io/react-todo-app)
 
 ## :cloud: Installation

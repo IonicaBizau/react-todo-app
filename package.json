@@ -48,6 +48,7 @@
   },
   "blah": {
       "show_installation": true,
+      "description": "**Hey!** :blush: This is my first project in React. If you find any tips, please share them with me and let me know what can pe improved.",
       "is_only_web": false,
       "ex_img": "https://i.imgur.com/0g5ycgd.png",
       "ex_url": "https://ionicabizau.github.io/react-todo-app",
