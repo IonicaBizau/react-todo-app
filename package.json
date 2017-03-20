@@ -1,6 +1,6 @@
 {
   "name": "react-todo-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React powered todo app.",
   "main": "src/index.js",
   "scripts": {
@@ -34,6 +34,7 @@
     "lib/",
     "dist/",
     "src/",
+    "scripts/",
     "resources/",
     "menu/",
     "cli.js",
