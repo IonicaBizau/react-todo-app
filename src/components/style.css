@@ -88,11 +88,12 @@ form.create-todo-form input {
 
 
 tr.todo-not-completed td:first-of-type {
-    color: #e74c3c;
+    color: #1abc9c;
 }
 
 tr.todo-completed td:first-of-type {
-    color: #1abc9c;
+    color: #787878;
+    text-decoration: line-through;
 }
 
 tr > td:first-of-type {
